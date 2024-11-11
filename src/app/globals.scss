@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('/fonts/DMSansVariable.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    font-family: 'MyCustomFont', sans-serif; // Fallback to sans-serif
+}

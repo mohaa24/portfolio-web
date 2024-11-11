@@ -1,0 +1,6 @@
+@use "mixins"; // Import mixins or variables from mixins.scss
+
+:root {
+    background-color: #313139;
+    --primary: #{mixins.$primary-color}; // Use interpolation to inject SCSS variable into CSS
+}
