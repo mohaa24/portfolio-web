@@ -3,10 +3,10 @@ import styles from "./NavBar.module.scss";
 import { useState } from "react";
 import Button from "antd/es/button";
 
- type TTabs = {
-   label: string;
-   key: string;
- };
+type TTabs = {
+  label: string;
+  key: string;
+};
 
 const NavBar = (): JSX.Element => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -38,12 +38,12 @@ const NavBar = (): JSX.Element => {
       label: "Project",
     },
     {
-      key:'contact',
-      label:"Contact"
-    }
+      key: "contact",
+      label: "Contact",
+    },
   ];
- 
-  const tabList = tabs.map((item: any) => {
+
+  const tabList = tabs.map((item: TTabs) => {
     return (
       <li key={item.key}>
         <Button
