@@ -1,12 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=VT323&display=swap');
+
 .heroMainContainer {
     display: flex;
+    flex-direction: column;
+    gap: 20px;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    width: 100vw;
+
+    @media screen and (max-width: 768px) {
+        text-align: center;
+    }
+
+    .sub {
+        font-size: 18px;
+        color: #999;
+        font-family: 'VT323', sans-serif;
+    }
+
+    .scroll {
+        transform: rotate(270deg);
+        font-size: 30px;
+        color: white;
+        position: relative;
+        bottom: -20vh;
+    }
 
     h1 {
         font-size: 50px;
+
+        @media screen and (max-width: 768px) {
+            font-size: 30px;
+        }
     }
 }
 
@@ -25,7 +51,6 @@ text set in the data-text attribute. */
     height: 100%;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:100');
 
 .headLine {
     display: flex;
@@ -41,33 +66,23 @@ h1.glitch {
     font-family: 'Montserrat', sans-serif;
 }
 
+// Animation ----------------------------------------------------------------
 .glitch {
     position: relative;
     color: white;
     font-size: 4em;
     letter-spacing: .5em;
-    /* Animation provies a slight random skew. Check bottom of doc
-	for more information on how to random skew. */
     animation: glitch-skew 1s infinite linear alternate-reverse;
 
-    // Creates a copy before our text. 
+
     &::before {
-        // Duplicates our text with the mixin.
         @include glitchCopy;
-        // Scoots text slightly to the left for the color offset.
         left: 2px;
-        // Creates the color 'shadow' that happens on the glitch.
         text-shadow: -2px 0 #ff00c1;
-        /* Creates an initial clip for our glitch. This works in
-		a typical top,right,bottom,left fashion and creates a mask
-		to only show a certain part of the glitch at a time. */
         clip: rect(44px, 450px, 56px, 0);
-        /* Runs our glitch-anim defined below to run in a 5s loop, infinitely,
-		with an alternating animation to keep things fresh. */
         animation: glitch-anim 5s infinite linear alternate-reverse;
     }
 
-    // Creates a copy after our text. Note comments from ::before.
     &::after {
         @include glitchCopy;
         left: -2px;
@@ -76,10 +91,6 @@ h1.glitch {
     }
 }
 
-/* Creates an animation with 20 steaps. For each step, it calculates 
-a percentage for the specific step. It then generates a random clip
-box to be used for the random glitch effect. Also adds a very subtle
-skew to change the 'thickness' of the glitch.*/
 @keyframes glitch-anim {
     $steps: 20;
 
@@ -91,7 +102,6 @@ skew to change the 'thickness' of the glitch.*/
     }
 }
 
-// Same deal, just duplicated for ultra randomness.
 @keyframes glitch-anim2 {
     $steps: 20;
 
@@ -103,7 +113,6 @@ skew to change the 'thickness' of the glitch.*/
     }
 }
 
-// Does the same deal as before, but now only skews. Used for main text.
 @keyframes glitch-skew {
     $steps: 10;
 

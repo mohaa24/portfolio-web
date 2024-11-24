@@ -13,7 +13,8 @@ const NavBar = (): JSX.Element => {
   const [selectedTab, setSelectedTab] = useState("home");
 
   const ButtonStyle = {
-    color: "white",
+    // color: "white",
+    color:"#999"
   };
   const ActiveButtonStyle = {
     background: "rgba(88,175,223,.1)",

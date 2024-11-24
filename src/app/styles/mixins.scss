@@ -1,4 +1,8 @@
-$primary-color: #64ff00;
+$primary-color: rgb(88, 196, 220);
+$color-light:#fff;
+$color-grey1:#313139;
+$color-grey2: #26262d;
+#
 
 @mixin primary-bg {
     background-color: $primary-color;

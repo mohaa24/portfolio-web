@@ -2,8 +2,9 @@
 import Footer from "./components/Footer/Footer";
 import NavBar from "./components/NavBar/NavBar";
 import styles from "./layout.module.scss";
-import "./styles/theme.scss";
+// import "./styles/theme.scss";
 import "./globals.scss"
+import ParticleEffect from "./components/ParticleEffect/ParticleEffect";
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -11,9 +12,10 @@ export default function RootLayout({
 }>) {
   return (
     <html className={styles.root} lang="en">
+  {/* <ParticleEffect/> */}
       <body className={styles.bodyContainer}>
         {/* <div>Loader</div> */}
-        <div className={styles.container}>
+        <div className={`${styles.container} antialiased`}>
           <NavBar />
           <main className={styles.wrapper}>{children}</main>
           <Footer />
