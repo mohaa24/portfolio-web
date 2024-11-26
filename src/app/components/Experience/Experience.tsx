@@ -4,7 +4,7 @@ export const Experience = ():JSX.Element=>{
 return (
   <>
     <div className={`${styles.xpCtr}`}>
-      <h1 className=" text-4xl text-left w-full text-white antialiased">
+      <h1 className=" text-4xl text-left w-full Font antialiased">
         Experience
       </h1>
       <div className=" text-white antialiased font-sans">

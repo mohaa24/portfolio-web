@@ -1,3 +1,4 @@
+import { BorderBeam } from '@/components/ui/border-beam';
 import styles from './Skills.module.scss';
 
 export const Skills = ():JSX.Element=>{
@@ -49,7 +50,6 @@ return (
         <p></p>
       </div>
     </div>
-  
   </>
 );
 }

@@ -4,29 +4,25 @@ import NavBar from "./components/NavBar/NavBar";
 import styles from "./layout.module.scss";
 // import "./styles/theme.scss";
 import "./globals.scss"
-import ParticleEffect from "./components/ParticleEffect/ParticleEffect";
+import { AppContextProvider } from "./context/appContext";
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html className={styles.root} lang="en">
-  {/* <ParticleEffect/> */}
-      <body className={styles.bodyContainer}>
-        {/* <div>Loader</div> */}
-        <div className={`${styles.container} antialiased`}>
-          <NavBar />
-          <main className={styles.wrapper}>{children}</main>
-          <Footer />
-          <div className={`${styles.line} ${styles.top}`}></div>
-          <div className={`${styles.line} ${styles.right}`}></div>
-
-          <div className={`${styles.line} ${styles.left}`}></div>
-
-          <div className={`${styles.line} ${styles.bottom}`}></div>
-        </div>
-      </body>
-    </html>
+    <AppContextProvider>
+      <html className={styles.root} lang="en">
+        {/* <ParticleEffect/> */}
+        <body className={styles.bodyContainer}>
+          {/* <div>Loader</div> */}
+          <div className={`${styles.container} antialiased text-primaryFont`}>
+            <NavBar />
+            <main className={`${styles.wrapper} w-screen overflow-hidden`}>{children}</main>
+            <Footer />
+          </div>
+        </body>
+      </html>
+    </AppContextProvider>
   );
 }
