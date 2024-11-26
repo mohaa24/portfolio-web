@@ -1,6 +1,6 @@
 import { BorderBeam } from "@/components/ui/border-beam";
 
-export function Container({children}) {
+export function Container({children}:{children:React.ReactNode}) {
   return (
     <div className="relative rounded-xl">
       {children}
