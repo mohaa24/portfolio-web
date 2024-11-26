@@ -16,9 +16,13 @@ export default function RootLayout({
         {/* <ParticleEffect/> */}
         <body className={styles.bodyContainer}>
           {/* <div>Loader</div> */}
-          <div className={`${styles.container} antialiased text-primaryFont`}>
+          <div
+            className={`${styles.container} antialiased text-primaryFont selection:bg-primaryColor`}
+          >
             <NavBar />
-            <main className={`${styles.wrapper} w-screen overflow-hidden`}>{children}</main>
+            <main className={`${styles.wrapper} w-screen overflow-hidden`}>
+              {children}
+            </main>
             <Footer />
           </div>
         </body>

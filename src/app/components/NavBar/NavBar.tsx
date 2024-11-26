@@ -4,21 +4,21 @@ import { useEffect, useState } from "react";
 import Button from "antd/es/button";
 import { useAppContext } from "@/app/context/appContext";
 import { DarkModeSwitch } from "react-toggle-dark-mode";
-import logo from '@/app/logo.svg';
+import logo from "@/app/logo.svg";
 type TTabs = {
   label: string;
   key: string;
 };
 
 const NavBar = (): JSX.Element => {
-  const {selectedTab,setSelectedTab} = useAppContext();
+  const { selectedTab, setSelectedTab } = useAppContext();
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const ButtonStyle = {
     // color: "white",
-    color:"#999",
-    fontWeight:600,
-    background:'none'
+    color: "#999",
+    fontWeight: 600,
+    background: "none",
   };
   const ActiveButtonStyle = {
     background: "rgba(88,175,223,.1)",
@@ -47,7 +47,6 @@ const NavBar = (): JSX.Element => {
       key: "experience",
       label: "Experience",
     },
-
   ];
 
   const tabList = tabs.map((item: TTabs) => {
@@ -68,24 +67,26 @@ const NavBar = (): JSX.Element => {
       </li>
     );
   });
-const [darkMode ,setDarkMode]= useState(true);
+  const [darkMode, setDarkMode] = useState(true);
   const toggleMenu = () => setIsOpen(!isOpen);
   return (
     <nav
-      className={`${styles.navbar} fixed py-4 w-full backdrop-blur-sm flex flex-row align-baseline justify-center border-solid border-borderColor border-b-2`}
+      className={`${styles.navbar} fixed py-3 w-full backdrop-blur-sm flex flex-row align-baseline items-center justify-between border-solid border-borderColor border-b-2 md:justify-center`}
     >
       <div className={`${styles.navbarContainer} md:w-5/6 `}>
-        <div className={`${styles.logo} flex-row flex text-3xl font-extrabold`}>
-          {/* <div className="text-primaryColor">{""}Adnan</div>
-          <div className=" text-white">.dev{""}</div> */}
-          <img src={logo.src} alt="" />
+        <div
+          className={`${styles.logo}border-solid border-2 rounded-xl border-borderColor px-2 flex-row flex text-2xl`}
+        >
+          <div className="text-primaryColor font-bold">{""}Adnan</div>
+          <div className=" text-white font-thin">.dev{""}</div>
+          {/* <img src={logo.src} alt="" /> */}
         </div>
         <ul className={`${styles.navLinks}`}>
           {tabList && tabList}
 
           <div className="">
             <DarkModeSwitch
-            style={{marginTop:6}}
+              style={{ marginTop: 6 }}
               sunColor="yellow"
               moonColor="#fff"
               checked={darkMode}
@@ -96,12 +97,11 @@ const [darkMode ,setDarkMode]= useState(true);
             />
           </div>
         </ul>
-
-        <div className={styles.hamburger} onClick={toggleMenu}>
-          <div className={styles.bar}></div>
-          <div className={styles.bar}></div>
-          <div className={styles.bar}></div>
-        </div>
+      </div>
+      <div className={`${styles.hamburger} md:hidden`} onClick={toggleMenu}>
+        <div className={styles.bar}></div>
+        <div className={styles.bar}></div>
+        <div className={styles.bar}></div>
       </div>
     </nav>
   );

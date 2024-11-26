@@ -98,7 +98,7 @@ const Me = () => {
           sync: false,
         },
         value: {
-          min: 0.05,
+          min: 0.05,        
           max: 0.4,
         },
       },

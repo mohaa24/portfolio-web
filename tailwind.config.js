@@ -19,6 +19,8 @@ module.exports = {
   	colors: {
   		primaryColor: 'rgb(88 196 220)',
   		primaryOverlay: 'rgba(88,175,223,.1)',
+		secondaryOverlay:'#369eff',
+		black:'#000',
   		primaryFont: '#fff',
   		secondaryFont: '#999',
   		bgGradient: 'background: linear-gradient(180.2deg, rgb(30, 33, 48) 6.8%, rgb(74, 98, 110) 131%);',

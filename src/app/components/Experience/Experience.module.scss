@@ -6,3 +6,11 @@
     align-items: center;
     // height: 100vh;
 }
+.custom{
+    svg{
+        fill: white;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+    }
+}

@@ -10,6 +10,8 @@ import { useAppContext } from "./context/appContext";
 import Particles from "./components/ParticleEffect/ParticleEffect";
 import AnimatedCanvas from "./components/ParticleEffect/ParticleEffect";
 import { Container } from "./components/Container/Container";
+import DotPattern from "@/components/ui/dot-pattern";
+import { cn } from "@/lib/utils";
 export default function Home() {
   const { selectedTab } = useAppContext();
   const scrollToSection = (id: string) => {
@@ -26,30 +28,32 @@ export default function Home() {
 
   return (
     <div className={styles.page}>
-      <section id="home" className=" w-full flex justify-center align-middle">
+      <section id="home" className=" w-full flex justify-center">
         <Hero />
       </section>{" "}
-      <section
-        id="about"
-        className="pb-40 flex justify-center align-middle text-center md:text-start"
-      >
-        <div className=" w-5/6 ">
+      <section id="about" className=" flex justify-center md:text-start">
+        <div className=" md:w-5/6">
           <About />
         </div>
       </section>
       <section
         id="skills"
-        className="flex justify-center align-middle text-center md:text-start"
+        className={` p-10 relative ${styles.custom} md:py-40`}
       >
-        <div className=" w-4/6 ">
+        <div className={`flex flex-col items-center relative z-10`}>
           <Skills />
         </div>
+        <DotPattern
+          className={cn(
+            "[mask-image:radial-gradient(300px_circle_at_center,white,transparent)]"
+          )}
+        />
       </section>{" "}
       <section
         id="experience"
-        className="flex justify-center align-middle text-center md:text-start"
+        className="flex justify-center align-middle md:text-start"
       >
-        <div className=" w-4/6 ">
+        <div className=" md:w-5/6 ">
           <Experience />
         </div>
       </section>
