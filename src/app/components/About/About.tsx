@@ -10,11 +10,11 @@ return (
     <div
       className={`${styles.AboutCtr}flex flex-row rounded-xl p-10  md:flex `}
     >
-      <div className="flex flex-col  gap-30 text-left md:w-3/6">
-        <h1 className="text-6xl md:text-8xl">About Me...</h1>
-        <div className=" w-full flex justify-center hidden md:flex ">
+      <div className="flex flex-col gap-30 text-left md:w-3/6 items-start">
+        <h1 className="text-6xl md:text-9xl text-right pr-10">About<br className=' hidden md:block'/> Me</h1>
+        {/* <div className=" w-full flex justify-center hidden md:flex ">
           <Me />
-        </div>
+        </div> */}
       </div>
 
       <div className="font-sans text-lg font-medium md:w-3/6">

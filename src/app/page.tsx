@@ -32,7 +32,7 @@ export default function Home() {
         <Hero />
       </section>{" "}
       <section id="about" className=" flex justify-center md:text-start">
-        <div className=" md:w-5/6">
+        <div className=" md:w-4/6">
           <About />
         </div>
       </section>
@@ -53,7 +53,7 @@ export default function Home() {
         id="experience"
         className="flex justify-center align-middle md:text-start"
       >
-        <div className=" md:w-5/6 ">
+        <div className=" md:w-3/6 ">
           <Experience />
         </div>
       </section>

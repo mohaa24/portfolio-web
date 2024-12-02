@@ -6,12 +6,14 @@ import AnimatedCanvas from "../ParticleEffect/ParticleEffect";
 const Hero = () => {
   const glitch = useGlitch();
   return (
-    <div className={`${styles.heroMainContainer} w-5/6 md:w-5/6`}>
+    <div className={`${styles.heroMainContainer} md:w-5/6`}>
       <div className=" absolute w-full h-full top-0 left-0">
         <AnimatedCanvas />
       </div>
 
-      <div className={`${styles.headLine} flex justify-center align-middle flex-col`}>
+      <div
+        className={`${styles.headLine} flex justify-center align-middle flex-col`}
+      >
         {/* <div className="text-6xl bg-secondaryOverlay p-5 rounded-xl">
           <ReactTyped
             startWhenVisible
@@ -23,7 +25,10 @@ const Hero = () => {
             cursorChar={"_"}
           />
         </div> */}
-        <h1 className={`${styles.glitch} text-4xl md:text-6xl`} data-text="I'M ADNAN">
+        <h1
+          className={`${styles.glitch} text-4xl w-5/6 md:text-6xl w-full`}
+          data-text="I'M ADNAN"
+        >
           I'M ADNAN
         </h1>
       </div>
