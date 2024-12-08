@@ -10,12 +10,12 @@ export const Skills = ():JSX.Element=>{
 return (
   <>
     <div
-      className={`flex flex-col gap-5 align-middle justify-center relative ${styles.custom} md:text-center`}
+      className={`flex flex-col gap-5 align-middle justify-center relative ${styles.custom} text-black dark:text-primaryFont md:text-center`}
     >
-      <h1 className=" text-6xl w-full text-white antialiased mb-5 md:text-8xl">
+      <h1 className=" text-5xl text-white antialiased mb-5 md:text-8xl w-full">
         Things I've used...
       </h1>
-      <div className=" bg-black">
+      <div className=" dark:bg-black w-[80vw] md:w-auto">
         <Container props={{ type: "border" }}>
           <Stack />
         </Container>

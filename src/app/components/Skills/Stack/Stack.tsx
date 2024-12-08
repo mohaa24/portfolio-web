@@ -17,6 +17,10 @@ const Stack = (): JSX.Element => {
 
   const items: MenuItem[] = [
     {
+      label: "All",
+      key: "all",
+    },
+    {
       label: "Front-End",
       key: "front",
       icon: "",
@@ -28,10 +32,6 @@ const Stack = (): JSX.Element => {
     {
       label: "Data Science",
       key: "ds",
-    },
-    {
-      label: "All",
-      key: "all",
     },
   ];
 
@@ -148,18 +148,11 @@ const Stack = (): JSX.Element => {
     filtered = stackItems.filter((item) => item.type.includes(current));
   }
   return (
-    // <Menu
-    //   onClick={onClick}
-    //   selectedKeys={[current]}
-    //   mode="horizontal"
-    //   items={items}
-    //   theme="dark"
-    // />
     <div className=" border-2 border-borderColor rounded-xl p-5">
-      <div className=" border-b-2 border-borderColor flex gap-5 flex-row">
+      <div className=" border-b-2 border-borderColor flex gap-5 flex-row overflow-scroll md:overflow-hidden">
         {items.map((item: any) => (
           <div
-            className={` cursor-pointer ${item.key === current && "border-b-2 border-primaryColor"}`}
+            className={` cursor-pointer ${item.key === current && "border-b-2 border-primaryColor"} text-nowrap`}
             id={item.key}
             onClick={(e) => onClick(e)}
           >

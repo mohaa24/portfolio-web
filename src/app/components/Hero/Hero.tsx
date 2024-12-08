@@ -1,10 +1,9 @@
-import { useGlitch } from "react-powerglitch";
 import styles from "./Hero.module.scss";
-import { ReactTyped } from "react-typed";
 import { DoubleLeftOutlined } from "@ant-design/icons";
 import AnimatedCanvas from "../ParticleEffect/ParticleEffect";
+import { useAppContext } from "@/app/context/appContext";
 const Hero = () => {
-  const glitch = useGlitch();
+  const {darkMode}=useAppContext();
   return (
     <div className={`${styles.heroMainContainer} md:w-5/6`}>
       <div className=" absolute w-full h-full top-0 left-0">
@@ -26,7 +25,7 @@ const Hero = () => {
           />
         </div> */}
         <h1
-          className={`${styles.glitch} text-4xl w-5/6 md:text-6xl w-full`}
+          className={`${styles.glitch} text-black dark:text-[#fff] text-4xl w-5/6 md:text-6xl w-full`}
           data-text="I'M ADNAN"
         >
           I'M ADNAN
@@ -46,7 +45,7 @@ const Hero = () => {
         /> */}
       </div>
       <div className={styles.scroll}>
-        <DoubleLeftOutlined />
+        <DoubleLeftOutlined style={{color: darkMode? 'white':'black'}} />
       </div>
     </div>
   );

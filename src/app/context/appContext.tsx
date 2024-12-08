@@ -4,6 +4,8 @@ import React, { createContext, useContext, useState, ReactNode } from "react";
 interface AppContextProps {
   selectedTab: string;
   setSelectedTab: (tab: string) => void;
+  darkMode:boolean;
+  setDarkMode: (darkMode:boolean)=>void;
 }
 
 // Create the context
@@ -12,9 +14,12 @@ const AppContext = createContext<AppContextProps | undefined>(undefined);
 // Provider component
 export const AppContextProvider = ({ children }: { children: ReactNode }) => {
   const [selectedTab, setSelectedTab] = useState<string>("home");
+  const [darkMode , setDarkMode] = useState(true);
 
   return (
-    <AppContext.Provider value={{ selectedTab, setSelectedTab }}>
+    <AppContext.Provider
+      value={{ selectedTab, setSelectedTab, darkMode, setDarkMode }}
+    >
       {children}
     </AppContext.Provider>
   );

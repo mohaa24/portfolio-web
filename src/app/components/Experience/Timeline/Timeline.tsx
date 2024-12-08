@@ -5,6 +5,7 @@ import { SiReact } from "react-icons/si";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBriefcase, faGraduationCap } from "@fortawesome/free-solid-svg-icons";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
+import { useAppContext } from "@/app/context/appContext";
 
 
 const Timeline = (): JSX.Element => {
@@ -13,6 +14,7 @@ const Timeline = (): JSX.Element => {
     icon: IconProp;
     label: string;
   };
+  const {darkMode} = useAppContext();
 const renderIcon = (icon:IconProp):JSX.Element=>{
   return (
     <FontAwesomeIcon
@@ -74,11 +76,11 @@ const renderLabel = (label:string)=>{
         theme={{
           components: {
             Timeline: {
-              tailColor: "white",
-              colorText: "white",
-              dotBg: "black",
+              tailColor: darkMode ? "white" : "black",
+              colorText: darkMode ? "white" : "black",
+              dotBg: darkMode ? "black" : "white",
               tailWidth: 1,
-              itemPaddingBottom:50,
+              itemPaddingBottom: 50,
             },
           },
         }}

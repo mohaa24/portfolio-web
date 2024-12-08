@@ -13,6 +13,7 @@ type TTabs = {
 const NavBar = (): JSX.Element => {
   const { selectedTab, setSelectedTab } = useAppContext();
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const {darkMode, setDarkMode} = useAppContext();
 
   const ButtonStyle = {
     // color: "white",
@@ -67,18 +68,17 @@ const NavBar = (): JSX.Element => {
       </li>
     );
   });
-  const [darkMode, setDarkMode] = useState(true);
   const toggleMenu = () => setIsOpen(!isOpen);
   return (
     <nav
-      className={`${styles.navbar} fixed py-3 w-full backdrop-blur-sm flex flex-row align-baseline items-center justify-between border-solid border-borderColor border-b-2 md:justify-center`}
+      className={`${styles.navbar} fixed py-3 w-full backdrop-blur-lg flex flex-row align-baseline items-center justify-between border-solid border-borderColor border-b-2 md:justify-center`}
     >
       <div className={`${styles.navbarContainer} md:w-5/6 `}>
         <div
-          className={`${styles.logo}border-solid border-2 rounded-xl border-borderColor px-2 flex-row flex text-2xl`}
+          className={`${styles.logo}border-solid border-2 rounded-xl border-borderColor  px-4 py-2 flex-row flex text-2xl`}
         >
           <div className="text-primaryColor font-bold">{""}Adnan</div>
-          <div className=" text-white font-thin">.dev{""}</div>
+          <div className=" text-black dark:text-primaryFont  font-thin">.dev{""}</div>
           {/* <img src={logo.src} alt="" /> */}
         </div>
         <ul className={`${styles.navLinks}`}>
@@ -87,7 +87,7 @@ const NavBar = (): JSX.Element => {
           <div className="">
             <DarkModeSwitch
               style={{ marginTop: 6 }}
-              sunColor="yellow"
+              sunColor="orange"
               moonColor="#fff"
               checked={darkMode}
               onChange={() => {
@@ -98,10 +98,22 @@ const NavBar = (): JSX.Element => {
           </div>
         </ul>
       </div>
-      <div className={`${styles.hamburger} md:hidden`} onClick={toggleMenu}>
+      <div className={`${styles.hamburger} hidden`} onClick={toggleMenu}>
         <div className={styles.bar}></div>
         <div className={styles.bar}></div>
         <div className={styles.bar}></div>
+      </div>
+      <div className=" md:hidden">
+        <DarkModeSwitch
+          style={{ marginTop: 6 }}
+          sunColor="orange"
+          moonColor="#fff"
+          checked={darkMode}
+          onChange={() => {
+            setDarkMode(!darkMode);
+          }}
+          size={20}
+        />
       </div>
     </nav>
   );
