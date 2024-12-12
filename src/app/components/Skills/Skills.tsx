@@ -15,7 +15,7 @@ return (
       <h1 className=" text-5xl text-white antialiased mb-5 md:text-8xl w-full">
         Things I've used...
       </h1>
-      <div className=" dark:bg-black w-[80vw] md:w-auto">
+      <div className=" bg-primaryFont dark:bg-black w-[80vw] md:w-auto">
         <Container props={{ type: "border" }}>
           <Stack />
         </Container>

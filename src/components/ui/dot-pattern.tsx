@@ -1,6 +1,7 @@
 import { useId } from "react";
 
 import { cn } from "@/lib/utils";
+import { useAppContext } from "@/app/context/appContext";
 
 interface DotPatternProps {
   width?: any;
@@ -22,10 +23,10 @@ export function DotPattern({
   cy = 1,
   cr = 1,
   className,
-  ...props
+ ...props
 }: DotPatternProps) {
   const id = useId();
-
+  const {darkMode}= useAppContext();
   return (
     <svg
       aria-hidden="true"
@@ -45,7 +46,7 @@ export function DotPattern({
           x={x}
           y={y}
         >
-          <circle id="pattern-circle" cx={cx} cy={cy} r={cr} />
+          <circle id="pattern-circle" cx={cx} cy={cy} r={cr} fill={darkMode? 'white':'black'} />
         </pattern>
       </defs>
       <rect width="100%" height="100%" strokeWidth={0} fill={`url(#${id})`} />

@@ -1,3 +1,4 @@
+import { useAppContext } from "@/app/context/appContext";
 import { BorderBeam } from "@/components/ui/border-beam";
 import DotPattern from "@/components/ui/dot-pattern";
 import { cn } from "@/lib/utils";
