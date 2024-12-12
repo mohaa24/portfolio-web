@@ -34,7 +34,7 @@ function InnerLayout({ children }: { children: React.ReactNode }) {
           className={`${styles.container} antialiased text-primaryFont selection:bg-primaryColor`}
         >
           <NavBar />
-          <main className={`${styles.wrapper} w-screen overflow-hidden`}>
+          <main className={`${styles.wrapper} w-full overflow-hidden`}>
             {children}
           </main>
           <Footer />
