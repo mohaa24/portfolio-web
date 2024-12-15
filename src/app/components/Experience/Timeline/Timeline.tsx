@@ -10,7 +10,7 @@ import { useAppContext } from "@/app/context/appContext";
 
 const Timeline = (): JSX.Element => {
   type TXpItem = {
-    text: string;
+    text: JSX.Element;
     icon: IconProp;
     label: string;
   };
@@ -24,7 +24,7 @@ const renderIcon = (icon:IconProp):JSX.Element=>{
   );
       
 }
-const renderContent = (content: string) => {
+const renderContent = (content: JSX.Element) => {
   return <div className="mr-3 md:text-xl">{content}</div>;
 };
 
@@ -33,28 +33,57 @@ const renderLabel = (label:string)=>{
 }
   const XpItems: TXpItem[] = [
     {
-      text: "Became L1 Software Engineer at Noon. Developed seller-focused solutions with Next.js, React, and Redux, optimizing applications for responsiveness and accessibility.",
+      text: (
+        <>
+        Became L1 Software Engineer at Noon. Developed seller-focused
+          solutions with Next.js, React, and Redux, optimizing applications for
+          responsiveness and accessibility.
+        </>
+      ),
       icon: faBriefcase,
       label: "2021 - Present",
     },
     {
-      text: "Pursued a Master's in Data Science at the University of Greenwich, specializing in machine learning and analytics.",
+      text: (
+        <>
+        Pursued a Master's in Data Science at the University of Greenwich,
+          specializing in machine learning and analytics.
+        </>
+      ),
       icon: faGraduationCap,
       label: "2022 - 2024",
     },
 
     {
-      text: "Started as a Junior Developer at the Chartered Institute for Securities & Investment (CISI). Prototyped a new Intranet web app using React and supported marketing campaigns with custom solutions.",
+      text: (
+        <>
+        Started as a Junior Developer at the Chartered Institute for
+          Securities & Investment (CISI). Prototyped a new Intranet web app
+          using React and supported marketing campaigns with custom solutions.
+        </>
+      ),
       icon: faBriefcase,
       label: "2020 - 2021",
     },
     {
-      text: "Completed a Bachelor's degree in Software Engineering at London Metropolitan University, gaining foundational knowledge in software development.",
+      text: (
+        <>
+        Completed a Bachelor's degree in Software Engineering at London
+          Metropolitan University, gaining foundational knowledge in software
+          development.
+        </>
+      ),
       icon: faGraduationCap,
       label: "2018 - 2021",
     },
     {
-      text: "Worked at WNS/Aviva Insurance, supporting front-end with Angular, back-end with ASP.NET & SQL, and automating processes using VBA & UI Path.",
+      text: (
+        <>
+        Worked at WNS/Aviva Insurance, supporting front-end with Angular,
+          back-end with ASP.NET & SQL, and automating processes using VBA & UI
+          Path.
+        </>
+      ),
       icon: faBriefcase,
       label: "2017 - 2020",
     },

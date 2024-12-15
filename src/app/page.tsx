@@ -12,6 +12,7 @@ import AnimatedCanvas from "./components/ParticleEffect/ParticleEffect";
 import { Container } from "./components/Container/Container";
 import DotPattern from "@/components/ui/dot-pattern";
 import { cn } from "@/lib/utils";
+import { Projects } from "./components/Projects/Projects";
 export default function Home() {
   const { selectedTab } = useAppContext();
   const scrollToSection = (id: string) => {
@@ -57,7 +58,14 @@ export default function Home() {
           <Experience />
         </div>
       </section>
-      <section> </section>
+      <section>
+        {" "}
+        <div
+        className="flex justify-center align-middle md:text-start"
+>
+          <Projects />
+        </div>{" "}
+      </section>
       <section></section>
       <section></section>
       <div className=" py-4">.</div>
