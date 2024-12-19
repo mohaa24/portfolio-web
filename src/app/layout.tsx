@@ -6,6 +6,28 @@ import styles from "./layout.module.scss";
 import "./globals.scss"
 import { AppContextProvider, useAppContext } from "./context/appContext";
 
+import React, { useEffect } from "react";
+
+const GoogleAnalytics = () => {
+  useEffect(() => {
+    // Dynamically load the Google Analytics script
+    const script = document.createElement("script");
+    script.src = "https://www.googletagmanager.com/gtag/js?id=G-34WCE6VCFD";
+    script.async = true;
+    document.head.appendChild(script);
+
+    // Initialize Google Analytics
+    window.dataLayer = window.dataLayer || [];
+    function gtag(...args: any[]) {
+      window.dataLayer.push(args);
+    }
+    gtag("js", new Date());
+    gtag("config", "G-34WCE6VCFD");
+  }, []);
+
+  return null; // No UI to render
+};
+
 
 export default function RootLayout({
   children,
@@ -26,6 +48,9 @@ function InnerLayout({ children }: { children: React.ReactNode }) {
 
   return (
     <html className={`${styles.root} ${darkMode ? "dark" : ""}`} lang="en">
+      <head>    
+<GoogleAnalytics/>
+      </head>
       <meta />
       {/* <ParticleEffect/> */}
       <body className={` bg-white dark:bg-black ${styles.bodyContainer}`}>
