@@ -48,8 +48,19 @@ function InnerLayout({ children }: { children: React.ReactNode }) {
 
   return (
     <html className={`${styles.root} ${darkMode ? "dark" : ""}`} lang="en">
-      <head>    
-<GoogleAnalytics/>
+      <head>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-34WCE6VCFD"
+        ></script>
+        <script>
+          {`
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-34WCE6VCFD');
+    `}
+        </script>
       </head>
       <meta />
       {/* <ParticleEffect/> */}
