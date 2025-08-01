@@ -18,7 +18,7 @@ const Hero = () => {
     >
       <div className="grid items-center grid-cols-2 md:grid-cols-3 w-4/6 z-20 text-black dark:text-[#fff]">
         <div className="col-span-2 md:col-span-1 flex items-center justify-center ">
-          <Image width={300} height={300} alt="adnan" className=" rounded-full border-2 border-primaryColor  border-double object-contain  mb-5 w-[150px] md:w-[300px] md:block" src={img}/>
+          <Image width={300} height={300} priority alt="adnan" className=" rounded-full border-2 border-primaryColor  border-double object-contain  mb-5 w-[150px] md:w-[300px] md:block" src={img}/>
         </div>
         <div className="col-span-2  w-full backdrop-blur-sm">
          {/* <div className="text-2xl ">👋 Hi There...!</div>  */}
