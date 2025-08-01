@@ -8,16 +8,14 @@ return (
   <>
     {/* <Container> */}
     <div
-      className={`${styles.AboutCtr} text-black rounded-xl p-10 dark:text-primaryFont  md:flex flex-row `}
+      className={`${styles.AboutCtr} flex flex-col text-black rounded-xl p-10 backdrop-blur-sm dark:text-primaryFont h-full  md:flex md:flex-row `}
     >
       <div className="flex flex-col gap-30 md:w-2/6 md:items-end">
-        <h1 className="text-6xl pr-10 md:text-right md:text-9xl ">
+        <h1 className="text-6xl pr-10 mb-5 md:text-right md:text-9xl ">
           About
           <br className=" hidden md:block" /> Me
         </h1>
-        {/* <div className=" w-full flex justify-center hidden md:flex ">
-          <Me />
-        </div> */}
+
       </div>
 
       <div className="font-sans text-lg font-medium md:w-4/6">

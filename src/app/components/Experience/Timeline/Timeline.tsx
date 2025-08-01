@@ -35,13 +35,20 @@ const renderLabel = (label:string)=>{
     {
       text: (
         <>
-        Became L1 Software Engineer at Noon. Developed seller-focused
-          solutions with Next.js, React, and Redux, optimizing applications for
-          responsiveness and accessibility.
+        Promoted to L2 Software Engineer at Noon. 
         </>
       ),
       icon: faBriefcase,
-      label: "2021 - Present",
+      label: "2025 - Present",
+    },
+      {
+      text: (
+        <>
+        Became L1 Software Engineer at Noon. 
+        </>
+      ),
+      icon: faBriefcase,
+      label: "2021 - 2024",
     },
     {
       text: (
@@ -58,8 +65,7 @@ const renderLabel = (label:string)=>{
       text: (
         <>
         Started as a Junior Developer at the Chartered Institute for
-          Securities & Investment (CISI). Prototyped a new Intranet web app
-          using React and supported marketing campaigns with custom solutions.
+          Securities & Investment (CISI). 
         </>
       ),
       icon: faBriefcase,
@@ -79,9 +85,7 @@ const renderLabel = (label:string)=>{
     {
       text: (
         <>
-        Worked at WNS/Aviva Insurance, supporting front-end with Angular,
-          back-end with ASP.NET & SQL, and automating processes using VBA & UI
-          Path.
+        Started at WNS/Aviva Insurance as reinsurance accountant and progressed to RPA.
         </>
       ),
       icon: faBriefcase,

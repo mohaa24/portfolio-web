@@ -64,15 +64,14 @@ function InnerLayout({ children }: { children: React.ReactNode }) {
       </head>
       <meta />
       {/* <ParticleEffect/> */}
-      <body className={` bg-white dark:bg-black ${styles.bodyContainer}`}>
-        {/* <div>Loader</div> */}
-        <div
-          className={`${styles.container} antialiased text-primaryFont selection:bg-primaryColor`}
-        >
+      <body className="flex h-screen">
+        <div className="w-full grow flex flex-col bg-white dark:bg-black">
           <NavBar />
-          <main className={`${styles.wrapper} w-full overflow-hidden`}>
+
+          <main className="w-full flex-grow overflow-auto p-5">
             {children}
           </main>
+
           <Footer />
         </div>
       </body>

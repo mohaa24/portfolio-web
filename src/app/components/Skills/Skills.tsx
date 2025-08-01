@@ -10,7 +10,7 @@ export const Skills = ():JSX.Element=>{
 return (
   <>
     <div
-      className={`flex flex-col gap-5 align-middle justify-center relative ${styles.custom} text-black dark:text-primaryFont md:text-center`}
+      className={`flex flex-col gap-5 align-middle justify-center relative ${styles.custom} text-black dark:text-primaryFont md:text-center backdrop-blur-sm -z-1`}
     >
       <h1 className=" text-5xl text-white antialiased mb-5 md:text-8xl w-full">
         Things I've used...

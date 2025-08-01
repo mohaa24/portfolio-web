@@ -13,7 +13,7 @@ type TStack = {
 };
 
 const Stack = (): JSX.Element => {
-  const [current, setCurrent] = useState<TCategories>("all");
+  const [current, setCurrent] = useState<TCategories>("front");
 
   const items: MenuItem[] = [
     {
@@ -43,17 +43,35 @@ const Stack = (): JSX.Element => {
       type: ["front"],
       node: <>React</>,
     },
+     {
+      label: "React Native",
+      key: "reactNative",
+      type: ["front"],
+      node: <>React Native</>,
+    },
     {
       label: "Next.js",
       key: "next",
       type: ["front"],
       node: <>Next.js</>,
     },
+     {
+      label: "Tailwind CSS",
+      key: "tailwind",
+      type: ["front"],
+      node: <>Tailwind CSS</>,
+    },
+       {
+      label: "React Hook Form",
+      key: "hookForm",
+      type: ["front"],
+      node: <>React Hook Form</>,
+    },
     {
-      label: "Redux",
+      label: "Zustand",
       key: "redux",
       type: ["front"],
-      node: <>Redux</>,
+      node: <>Zustand</>,
     },
     {
       label: "Apollo Client",
@@ -66,12 +84,6 @@ const Stack = (): JSX.Element => {
       key: "sass",
       type: ["front"],
       node: <>SASS/SCSS</>,
-    },
-    {
-      label: "Tailwind",
-      key: "tailwind",
-      type: ["front"],
-      node: <>Tailwind</>,
     },
     {
       label: "Three.js",

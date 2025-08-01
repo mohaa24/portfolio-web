@@ -8,12 +8,12 @@ export const Experience = ():JSX.Element=>{
 return (
   <>
     <div
-      className={`flex flex-col p-10 gap-5 align-middle justify-center text-black dark:text-primaryFont relative ${styles.custom} md:text-center`}
+      className={`flex flex-col p-10 gap-5 justify-center items-center text-black dark:text-primaryFont ${styles.custom} md:text-center`}
     >
       <h1 className=" text-5xl w-full text-white antialiased mb-5 md:text-8xl">
         My Timeine...
       </h1>
-      <div className="">
+      <div className="w-full md:w-4/6  backdrop-blur-sm">
         <Timeline />
       </div>
     </div>

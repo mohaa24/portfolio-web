@@ -1,13 +1,20 @@
 @font-face {
-    font-family: 'MyCustomFont';
-    src: url('/fonts/DMSansVariable.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'MyCustomFont';
+  src: url('/fonts/DMSansVariable.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-body {
-    font-family: 'MyCustomFont', sans-serif; // Fallback to sans-serif
+
+@layer base {
+//   * {
+//     @apply scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-100;
+//   }
+
+  body {
+    font-family: 'MyCustomFont', sans-serif;
+  }
 }

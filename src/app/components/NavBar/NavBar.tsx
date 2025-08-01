@@ -48,6 +48,10 @@ const NavBar = (): JSX.Element => {
       key: "experience",
       label: "Experience",
     },
+    {
+      key: "projects",
+      label: "Projects",
+    },
   ];
 
   const tabList = tabs.map((item: TTabs) => {
@@ -71,7 +75,7 @@ const NavBar = (): JSX.Element => {
   const toggleMenu = () => setIsOpen(!isOpen);
   return (
     <nav
-      className={`${styles.navbar} fixed py-3 w-full backdrop-blur-lg flex flex-row align-baseline items-center justify-between border-solid border-borderColor border-b-2 md:justify-center`}
+      className={`${styles.navbar} py-3 w-full backdrop-blur-lg flex flex-row align-baseline items-center justify-between border-solid border-borderColor border-b-2 md:justify-center`}
     >
       <div className={`${styles.navbarContainer} md:w-5/6 `}>
         <div
@@ -81,7 +85,7 @@ const NavBar = (): JSX.Element => {
           <div className=" text-black dark:text-primaryFont  font-thin">.dev{""}</div>
           {/* <img src={logo.src} alt="" /> */}
         </div>
-        <ul className={`${styles.navLinks}`}>
+        <ul className={`${styles.navLinks} hidden md:flex`}>
           {tabList && tabList}
 
           <div className="">
