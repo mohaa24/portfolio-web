@@ -165,7 +165,7 @@ const Stack = (): JSX.Element => {
         {items.map((item: any) => (
           <div
             className={` cursor-pointer ${item.key === current && "border-b-2 border-primaryColor"} text-nowrap`}
-            id={item.key}
+            key={item.key}
             onClick={(e) => onClick(e)}
           >
             {item.label}
@@ -175,7 +175,7 @@ const Stack = (): JSX.Element => {
       <div className="flex mt-2 gap-2 flex-wrap  md:w-[600px]">
         {filtered &&
           filtered.map((item) => (
-            <div className="text-primaryColor bg-primaryOverlay rounded-xl px-2 py-1 ">
+            <div className="text-primaryColor bg-primaryOverlay rounded-xl px-2 py-1" key={item.key}>
               {item.node}
             </div>
           ))}

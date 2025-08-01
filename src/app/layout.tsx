@@ -49,8 +49,11 @@ function InnerLayout({ children }: { children: React.ReactNode }) {
   return (
     <html className={`${styles.root} ${darkMode ? "dark" : ""}`} lang="en">
       <head>
+        <title>Mohamed Adnan | L2 Software Engineer</title>
+
         <script
           async
+          
           src="https://www.googletagmanager.com/gtag/js?id=G-34WCE6VCFD"
         ></script>
         <script>
@@ -62,7 +65,8 @@ function InnerLayout({ children }: { children: React.ReactNode }) {
     `}
         </script>
       </head>
-      <meta />
+      <meta name="description" content="Portfolio of Adnan Mohamed, a React Front-End Engineer with 6+ years of experience building scalable web applications. Explore projects, skills, and career highlights." />
+
       {/* <ParticleEffect/> */}
       <body className="flex h-screen">
         <div className="w-full grow flex flex-col bg-white dark:bg-black">
