@@ -152,6 +152,7 @@ const Stack = (): JSX.Element => {
   ];
 
   const onClick = (e: any) => {
+    console.log('clicking',e.target.id)
     setCurrent(e.target.id);
   };
   let filtered: TStack[] = stackItems;
@@ -165,7 +166,7 @@ const Stack = (): JSX.Element => {
         {items.map((item: any) => (
           <div
             className={` cursor-pointer ${item.key === current && "border-b-2 border-primaryColor"} text-nowrap`}
-            key={item.key}
+            id={item.key}
             onClick={(e) => onClick(e)}
           >
             {item.label}
